@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b277a1da120b57e4a93357ad5fb8dc95
+timeCreated: 1551377219
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - carPrefab: {instanceID: 0}
+  - carClone: {instanceID: 0}
+  - waste: {fileID: 1974314895771446, guid: b25239c01a5ad8d47aaddb36aeaac3d4, type: 2}
+  - wasteScript: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

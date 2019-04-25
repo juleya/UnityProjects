@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9088a0e706e3a0e488c8092d10d6df91
+timeCreated: 1549391716
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - tripleLaserPrefab: {fileID: 1206608133966204, guid: 20f14da01fca53c499625ffca2cb4f1c,
+      type: 2}
+  - laserPrefab: {fileID: 1471360255263838, guid: e9204d1132585274d99d48162cf587c5,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
