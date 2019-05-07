@@ -26,13 +26,17 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		float h = 5f * Input.GetAxis ("Mouse X");
-		transform.Rotate (0, h, 0);
+		if (Input.GetMouseButton (1)) {
+			
+			float h = 5f * Input.GetAxis ("Mouse X");
+			transform.Rotate (0, h, 0);
 
-		yaw += horizontalSpeed * Input.GetAxis ("Mouse X");
-		pitch -= verticalSpeed * Input.GetAxis ("Mouse Y");
+			yaw += horizontalSpeed * Input.GetAxis ("Mouse X");
+			pitch -= verticalSpeed * Input.GetAxis ("Mouse Y");
 
-		transform.eulerAngles = new Vector3 (pitch, yaw, 0.0f);
+			transform.eulerAngles = new Vector3 (pitch, yaw, 0.0f);
+
+		}
 
 
 
