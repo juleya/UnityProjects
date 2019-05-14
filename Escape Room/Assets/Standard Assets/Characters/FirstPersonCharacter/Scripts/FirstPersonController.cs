@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -42,6 +43,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+		public Text text;
+
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +58,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+			text = GameObject.Find ("Text").GetComponent<Text> ();
+			text.enabled = false;
         }
 
 
@@ -252,6 +258,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+
+			if(hit.gameObject.tag=="PC"){
+				Debug.Log ("yep");
+			}
         }
+
+		void OnTriggerEnter(Collider other) {
+			if (other.CompareTag ("PC")) {
+				text.enabled = true;
+			}
+		}
+
+			
     }
+
 }
