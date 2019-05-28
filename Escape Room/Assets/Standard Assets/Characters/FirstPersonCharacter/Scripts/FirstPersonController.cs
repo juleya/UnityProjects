@@ -43,7 +43,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-		public Text text;
 
         // Use this for initialization
         private void Start()
@@ -59,8 +58,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
 
-			text = GameObject.Find ("Text").GetComponent<Text> ();
-			text.enabled = false;
         }
 
 
@@ -263,12 +260,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				Debug.Log ("yep");
 			}
         }
-
-		void OnTriggerEnter(Collider other) {
-			if (other.CompareTag ("PC")) {
-				text.enabled = true;
-			}
-		}
+	
 
 			
     }

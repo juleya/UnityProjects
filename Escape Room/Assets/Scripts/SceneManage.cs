@@ -21,7 +21,7 @@ public class SceneManage : MonoBehaviour {
 	}
 
 	public void Return() {
-		SceneManager.LoadScene ("Classroom 1");
+		SceneManager.LoadScene ("Classroom 2");
 	}
 
 	public void ShowDialog() {

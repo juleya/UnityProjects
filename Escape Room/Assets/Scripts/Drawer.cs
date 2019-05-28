@@ -12,7 +12,7 @@ public class Drawer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		can = GameObject.Find ("Canvas").GetComponent<Canvas> ();
-		text = GameObject.Find ("Canvas").GetComponent<Text> ();
+		text = GameObject.Find ("Dialogue").GetComponent<Text> ();
 		can.enabled = false;
 		anim = GetComponent<Animation> ();
 	}
@@ -25,8 +25,19 @@ public class Drawer : MonoBehaviour {
 		
 	}
 
+	void OnTriggerEnter(Collider other){
+
+		text.text = "Press 'f' to open the drawer.";
+		can.enabled = true;
+	}
+
 	void OnTriggerStay(Collider other){
+
+
+
 		if (Input.GetKey ("f") && !open) {
+
+
 			foreach (AnimationState state in anim) {
 				state.speed = 1F;
 			}

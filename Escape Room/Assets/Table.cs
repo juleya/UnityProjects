@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class PC : MonoBehaviour {
-	
+public class Table : MonoBehaviour {
+
 	Canvas can;
 	Text dialogue;
 	Text adv;
@@ -21,18 +20,12 @@ public class PC : MonoBehaviour {
 	void Update () {
 		
 	}
-		
-	void OnMouseDown(){
-		SceneManager.LoadScene ("Screen");
-	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		dialogue.text = "Click computer to access.";
+		dialogue.text = "Click paper to access.";
 		adv.enabled = false;
 		can.enabled = true;
 	}
-
-
 
 }

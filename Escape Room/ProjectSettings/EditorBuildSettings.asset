@@ -13,4 +13,7 @@ EditorBuildSettings:
     guid: 6ddc300192b0bcd4e95c1b21906dc481
   - enabled: 1
     path: Assets/Scenes/Classroom 1.unity
+    guid: 42ef1316686dd3148b0d3d9681289495
+  - enabled: 1
+    path: Assets/Scenes/Classroom 2.unity
     guid: 00000000000000000000000000000000

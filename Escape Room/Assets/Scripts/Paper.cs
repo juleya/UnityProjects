@@ -10,10 +10,18 @@ public class Paper : MonoBehaviour {
 	public GameObject obj;
 	Canvas can;
 
+	Canvas can2;
+	Text dialogue;
+	Text adv;
+
 	bool once = false;
 	// Use this for initialization
 	void Start () {
 		obj = GameObject.Find ("Paper Canvas");
+
+		can2 = GameObject.Find ("Canvas").GetComponent<Canvas> ();
+		dialogue = GameObject.Find ("Dialogue").GetComponent<Text> ();
+		adv = GameObject.Find ("Advance").GetComponent<Text> ();
 	}
 
 	void Awake() {
@@ -44,13 +52,24 @@ public class Paper : MonoBehaviour {
 
 
 	void OnMouseDown(){
+		can2.enabled = false;
 		can.enabled = true;
+		dialogue.text = "Hmmm... Looks like this paper is empty.";
+		adv.enabled = false;
+		can2.enabled = true;
 	}
 
 	public void ExitPaper(){
 		can.enabled = false;
+		can2.enabled = false;
 	}
 
+	private void OnTriggerStay(Collider other)
+	{
+		dialogue.text = "Click paper to access.";
+		adv.enabled = false;
+		can2.enabled = true;
+	}
 
 		
 }
