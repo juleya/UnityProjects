@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Drawer : MonoBehaviour {
-	Animation anim;
+	static Animation anim;
 	bool open = false;
 
 	Canvas can;
@@ -34,21 +34,27 @@ public class Drawer : MonoBehaviour {
 	void OnTriggerStay(Collider other){
 
 
-
 		if (Input.GetKey ("f") && !open) {
 
-
+			can.enabled = false;
 			foreach (AnimationState state in anim) {
 				state.speed = 1F;
 			}
+
+			text.text = "Click the lighter to equip.";
+			can.enabled = true;
+
 			open = true;
 			anim.Play ();
+
 		} else if (Input.GetKey ("f") && open) {
 			foreach (AnimationState state in anim) {
 				state.speed = -1F;
 			}
 			open = false;
 			anim.Play ();
+
+			can.enabled = false;
 		}
 	}
 
