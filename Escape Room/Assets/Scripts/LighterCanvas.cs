@@ -8,6 +8,7 @@ public class LighterCanvas : MonoBehaviour {
 	Canvas can;
 	Text text;
 
+
 	Image image;
 	public Sprite off, on;
 	// Use this for initialization
@@ -15,7 +16,7 @@ public class LighterCanvas : MonoBehaviour {
 		
 		can = GameObject.Find ("Canvas").GetComponent<Canvas> ();
 		text = GameObject.Find ("Dialogue").GetComponent<Text> ();
-		can.enabled = false;
+
 		image = GetComponent<Image> ();
 	}
 	
@@ -27,10 +28,6 @@ public class LighterCanvas : MonoBehaviour {
 			image.sprite = off;
 		}
 	}
-
-	void OnMouseDown() {
-		text.text = "Press 'b' to ignite lighter.";
-		can.enabled = true;
-	}
+		
 
 }
